@@ -1,15 +1,15 @@
 pipeline {
 
   environment {
-    PROJECT = "ConfigManager"
-    APP_NAME = "ConfigManager"
-    FE_SVC_NAME = "${APP_NAME}-frontend"
+    PROJECT = "demo2-248908"
+    APP_NAME = "cfgmanapp"
+    FE_SVC_NAME = "${APP_NAME}-backend"
     CLUSTER = "demo2-gke-cluster"
     CLUSTER_ZONE = "europe-west3-a"
     IMAGE_TAG = "eu.gcr.io/${PROJECT}/${APP_NAME}:${env.BUILD_NUMBER}"
     JENKINS_CRED = "${PROJECT}"
     BUILD_HOME='/var/lib/jenkins/workspace'
-    APP_REPO="https://github.com/OksanaMurdza/ConfigManager.git"
+    APP_REPO="https://github.com/kv-053-devops/cfgmanapp.git"
   }
 
  agent {
@@ -70,7 +70,7 @@ spec:
       steps {
         container('docker') {
 			script {
-            docker.withRegistry("https://eu.gcr.io", "gcr:ConfigManager") {
+            docker.withRegistry("https://eu.gcr.io", "gcr:cfgmanapp") {
             sh "docker push ${IMAGE_TAG}"
 			}
         }
