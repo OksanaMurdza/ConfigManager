@@ -1,3 +1,4 @@
+import sys
 from flask import Flask, request, jsonify, make_response, Response
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
@@ -12,11 +13,15 @@ import os
 # Init app
 app = Flask(__name__)
 
+if len(sys.argv) != 1 :
+    host_db = sys.argv[1]
+else:
+    host_db = 'localhost'
 POSTGRES = {
     'user': 'postgres',
     'pw': 'postgres',
     'db': 'name',
-    'host': 'localhost',
+    'host': host_db,
     'port': '5432',
 }
 
@@ -106,4 +111,4 @@ if __name__ == '__main__':
     db.session.commit()
 
     app.debug = True
-    app.run(port =5004)
+    app.run(host='0.0.0.0', port =5004)
