@@ -4,7 +4,7 @@ RUN apt-get update
 WORKDIR /opt/config-manager
 COPY final.py .
 COPY requirements.txt . 
-RUN pip install requirements.txt
+RUN pip install -r requirements.txt
 RUN python3 final.py
 
 
