@@ -3,12 +3,9 @@ from flask import Flask, request, jsonify, make_response, Response
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 import os
-
 from google.cloud import storage
-
-
 import json
-import os
+
 
 # Init app
 app = Flask(__name__)
