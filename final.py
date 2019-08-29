@@ -10,10 +10,19 @@ import json
 # Init app
 app = Flask(__name__)
 
-if len(sys.argv) != 1 :
-    host_db = sys.argv[1]
+if len(sys.argv) = 5 :
+    user = sys.argv[1]
+    pw = sys.argv[2]
+    db = sys.argv[3]
+    host_db = sys.argv[4]
+    port = sys.argv[5]
 else:
+    user = 'postgres'
+    pw = 'postgres'
+    db = 'name'
     host_db = 'localhost'
+    port = '5432'
+   
 POSTGRES = {
     'user': 'postgres',
     'pw': 'postgres',
