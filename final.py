@@ -17,11 +17,11 @@ host_db = os.environ.get('HOST', 'localhost')
 port = os.environ.get('PORT', '5432')
    
 POSTGRES = {
-    'user': 'postgres',
-    'pw': 'postgres',
-    'db': 'name',
+    'user': user,
+    'pw': pw,
+    'db': db,
     'host': host_db,
-    'port': '5432',
+    'port': port,
 }
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
