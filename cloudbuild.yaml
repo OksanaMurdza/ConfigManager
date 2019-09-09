@@ -18,4 +18,4 @@ images:
 artifacts:
   objects:
     location: ['gs://$PROJECT_ID-spinnaker-conf']
-    paths: ['file.yaml']
+    paths: ['test.yaml']
