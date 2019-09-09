@@ -18,4 +18,4 @@ images:
 artifacts:
   objects:
     location: 'gs://gcpssproject-248014-spinnaker-conf/'
-    paths: ["test.json"]
+    paths: ["test.yaml"]
