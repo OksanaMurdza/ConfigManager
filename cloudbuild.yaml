@@ -17,5 +17,5 @@ images:
 #file for bucket
 artifacts:
   objects:
-    location: ['gs://$PROJECT_ID-spinnaker-conf']
+    location: ['gs://gcpssproject-248014-spinnaker-conf']
     paths: ['test.yaml']
