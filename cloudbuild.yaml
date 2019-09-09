@@ -13,4 +13,9 @@ images:
 #push
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'eu.gcr.io/$PROJECT_ID/configManager:$SHORT_SHA']
-  
+
+#file for bucket
+artifacts:
+  objects:
+    location: 'gs://$PROJECT_ID-spinnaker-conf/[FOLDER_NAME]'
+    paths: ['file.jaml']
