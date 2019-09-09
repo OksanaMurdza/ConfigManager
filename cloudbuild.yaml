@@ -17,5 +17,5 @@ images:
 #file for bucket
 artifacts:
   objects:
-    location: ['gs://$PROJECT_ID-spinnaker-conf/[FOLDER_NAME]']
+    location: ['gs://$PROJECT_ID-spinnaker-conf']
     paths: ['file.yaml']
