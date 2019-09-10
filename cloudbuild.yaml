@@ -33,4 +33,4 @@ steps:
 artifacts:
   objects:
     location: 'gs://$PROJECT_ID-spinnaker-conf/'
-    paths: "test.yaml"
+    paths: 'test.yaml'
